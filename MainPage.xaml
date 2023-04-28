@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_IssueGesture.MainPage">
+
+    <Grid RowDefinitions="44,44,*">
+        <Button Grid.Row="0" x:Name="btnShowGrid" Text="Show Grid" BackgroundColor="Blue" TextColor="White" Clicked="btnShowGrid_Clicked" />
+        <Label Grid.Row="1" x:Name="lblMessage" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start" />
+        <ScrollView Grid.Row="2" Orientation="Vertical">
+            <StackLayout Orientation="Vertical">
+                <Grid HeightRequest="750" />
+                <Frame x:Name="frm1" Margin="10,5,50,0" Padding="2" BorderColor="#333333" CornerRadius="5" HasShadow="False" IsVisible="False">
+                    <Grid BackgroundColor="Red" HeightRequest="750">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            <PinchGestureRecognizer PinchUpdated="PinchGestureRecognizer_PinchUpdated" />
+                            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Frame>
+                <!--
+                <Frame x:Name="frm2" Margin="10,0,50,0" Padding="2" BorderColor="#333333" CornerRadius="5" HasShadow="False" IsVisible="False">
+                    <Grid BackgroundColor="Green" HeightRequest="375">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            <PinchGestureRecognizer PinchUpdated="PinchGestureRecognizer_PinchUpdated" />
+                            <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </Frame>
+                -->
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
