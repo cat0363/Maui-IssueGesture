@@ -12,7 +12,6 @@ public partial class MainPage : ContentPage
     private void btnShowGrid_Clicked(object sender, EventArgs e)
     {
         frm1.IsVisible = true;
-        //frm2.IsVisible = true;
     }
 
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
